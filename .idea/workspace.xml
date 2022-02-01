@@ -1,49 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13269065-0b47-4813-9d70-aaeb2c02ab6e" name="Default Changelist" comment="">
+    <list default="true" id="13269065-0b47-4813-9d70-aaeb2c02ab6e" name="Default Changelist" comment="refactorisando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/Helper/PrintInformacion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/Helper/RegistroCategoria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/Helper/RegistroMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/Helper/RegistroProductoComplemento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/Helper/RegistroProductosPrincipales.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/Helper/RegistroRestaurante.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/CategoriaProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/clases/CategoriaProducto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/CategoriaProductosUVPT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/clases/CategoriaProductosUVPT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/clases/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/clases/Pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/ProductoComida.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/ProductoUVPT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/clases/ProductoUVPT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/clases/Venta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/clases/Venta.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/ICategoriaProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/ICategoriaProducto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IEstado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IEstado.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IPedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IPedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/backend/interfaces/IProductoComida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica01/controlador/OfertaProductos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/printInformacion/PrintInformacionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/printInformacion/PrintInformacionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/printInformacion/PrintMensajesConsola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/printInformacion/PrintMensajesConsola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/registros/RegistroCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/registros/RegistroCategoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/registros/RegistroMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/registros/RegistroMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/registros/RegistroProductoComplemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/registros/RegistroProductoComplemento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/registros/RegistroProductosPrincipales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/registros/RegistroProductosPrincipales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/registros/RegistroRestaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/registros/RegistroRestaurante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/validaciones/ValidacionDatoTeclado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/validaciones/ValidacionDatoTeclado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/CategoriaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/CategoriaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/CategoriaProductosUVPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/CategoriaProductosUVPT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/ProductoUVPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/ProductoUVPT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/ProductoVenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/ProductoVenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/clases/Venta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/clases/Venta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/interfaces/ICategoriaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/interfaces/ICategoriaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/interfaces/IEstado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/interfaces/IEstado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/interfaces/IMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/interfaces/IMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/interfaces/IPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/interfaces/IPedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/interfaces/IProductoVenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/interfaces/IProductoVenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,7 +27,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.83657587">
+    <splitter split-orientation="horizontal" split-proportion="0.5554115">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -78,11 +48,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="820">
-                  <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+                <state relative-caret-position="427">
+                  <caret line="69" column="78" lean-forward="true" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -90,11 +60,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Helper/validaciones/ValidacionDatoTeclado.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="460">
-                  <caret line="23" column="72" lean-forward="true" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+                <state relative-caret-position="307">
+                  <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -175,7 +145,7 @@
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="200">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
                 </state>
               </provider>
             </entry>
@@ -253,9 +223,9 @@
         <option value="$PROJECT_DIR$/src/backend/clases/ProductoVenta.java" />
         <option value="$PROJECT_DIR$/src/backend/interfaces/IEstado.java" />
         <option value="$PROJECT_DIR$/src/Helper/printInformacion/PrintInformacionMenu.java" />
-        <option value="$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java" />
         <option value="$PROJECT_DIR$/src/Helper/printInformacion/PrintMensajesConsola.java" />
         <option value="$PROJECT_DIR$/src/Helper/validaciones/ValidacionDatoTeclado.java" />
+        <option value="$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java" />
       </list>
     </option>
   </component>
@@ -271,7 +241,34 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Practica01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controlador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -339,18 +336,25 @@
       <workItem from="1643726695098" duration="3581000" />
       <workItem from="1643730416542" duration="11270000" />
       <workItem from="1643742400557" duration="1213000" />
-      <workItem from="1643745288094" duration="2228000" />
+      <workItem from="1643745288094" duration="3138000" />
     </task>
+    <task id="LOCAL-00001" summary="refactorisando">
+      <created>1643748000218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643748000220</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102403000" />
+    <option name="totallyTimeSpent" value="103313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17132115" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17132115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -369,7 +373,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.16988418" weight="0.48881432" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.5003861" side_tool="true" weight="0.22930649" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.5003861" side_tool="true" weight="0.38478747" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -414,6 +418,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactorisando" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactorisando" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Menu.java" />
@@ -647,16 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/clases/Pedido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -710,20 +708,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Helper/validaciones/ValidacionDatoTeclado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="72" lean-forward="true" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+        <state relative-caret-position="307">
+          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlador/ProcesoVentaProductos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="69" column="78" lean-forward="true" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

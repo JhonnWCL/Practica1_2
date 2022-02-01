@@ -63,7 +63,7 @@ public class ProcesoVentaProductos {
         void nuevoPedido () {
             msjConsola.printCategoriaProductoCantidad();
             int iCategoria = datoIngresado.getNummeroEnRango(restaurante.getMenu().getCategoriasProducto().size(), "Indice categoria");
-            int iProducto = datoIngresado.getNummeroEnRango(restaurante.getMenu().getCategoriasProducto().get(iCategoria - 1).getProductos().size() + 1, "Indice producto");
+            int iProducto = datoIngresado.getNummeroEnRango(restaurante.getMenu().getCategoriasProducto().get(iCategoria - 1).getProductos().size(), "Indice producto");
             int Icantidad = datoIngresado.getNummeroEnRango(1000, "Cantidad a comprar, -Maximo 1000 unidades -");
             categoriaProducto = restaurante.getMenu().getCategoriasProducto().get(iCategoria - 1);
             categoriaProducto.setSeleccionado(true);
