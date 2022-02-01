@@ -2,9 +2,8 @@ package controlador;
 
 import Helper.Color;
 import Helper.PrintInformacion;
-import Helper.RegistroRestaurante;
+import Helper.registros.RegistroRestaurante;
 import backend.clases.*;
-import backend.tiposDeDatosEnumerados.TipoProducto;
 
 import java.util.ArrayList;
 import java.util.Scanner;
