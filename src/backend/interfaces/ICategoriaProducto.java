@@ -1,6 +1,6 @@
 package backend.interfaces;
 
-import backend.clases.ProductoComida;
+import backend.clases.ProductoVenta;
 import backend.tiposDeDatosEnumerados.TipoUnidadDeVenta;
 
 import java.util.ArrayList;
@@ -14,10 +14,12 @@ public interface ICategoriaProducto {
 
     void setTipoUnidadDeVenta(TipoUnidadDeVenta tipoUnidadDeVenta);
 
-    void deleteProducto(ProductoComida producto);
+    void deleteProducto(ProductoVenta producto);
 
-    ArrayList<ProductoComida> getProductos();
+    ArrayList<ProductoVenta> getProductos();
 
-    void addProductoComida(ProductoComida producto);
+    void addProductoComida(ProductoVenta producto);
+    ProductoVenta getProductoVenta(int indice);
+
 
 }

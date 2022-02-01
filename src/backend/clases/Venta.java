@@ -9,13 +9,12 @@ public class Venta implements IVenta {
     private Cliente cliente;
     private float totalCompra;
 
-    public Venta(ArrayList<Pedido> pedidos, Cliente cliente, float totalCompra) {
+    public Venta(ArrayList<Pedido> pedidos, Cliente cliente) {
         this.pedidos = pedidos;
         this.cliente = cliente;
-        this.totalCompra = totalCompra;
     }
     public Venta(){
-    this.pedidos=new ArrayList<>();
+    pedidos=new ArrayList<>();
     }
 
     @Override
@@ -30,12 +29,10 @@ public class Venta implements IVenta {
 
     @Override
     public float getTotalCompra() {
+        for (int i = 0; i < pedidos.size(); i++) {
+            totalCompra+=pedidos.get(i).getPrecio();
+        }
         return totalCompra;
-    }
-
-    public void setTotalCompra(float  totalCompra)
-    {
-        this.totalCompra=totalCompra;
     }
 
     public void addPedido(Pedido pedido){

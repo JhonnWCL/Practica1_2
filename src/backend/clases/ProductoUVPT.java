@@ -6,7 +6,7 @@ import backend.tiposDeDatosEnumerados.TipoProducto;
 import java.util.ArrayList;
 
 //producto con venta por tamanio
-public class ProductoUVPT extends ProductoComida {
+public class ProductoUVPT extends ProductoVenta {
 
     TamañoProducto tamaño;
 

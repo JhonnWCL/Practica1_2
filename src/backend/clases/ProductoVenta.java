@@ -1,12 +1,12 @@
 package backend.clases;
 
 import backend.interfaces.IEstado;
-import backend.interfaces.IProductoComida;
+import backend.interfaces.IProductoVenta;
 import backend.tiposDeDatosEnumerados.TipoProducto;
 
 import java.util.ArrayList;
 
-public class ProductoComida implements IProductoComida, IEstado {
+public class ProductoVenta implements IProductoVenta, IEstado {
 
     private String nombre;
     private float precio;
@@ -14,18 +14,20 @@ public class ProductoComida implements IProductoComida, IEstado {
     private ArrayList<String> ingredientesCaracteristicos;
     private TipoProducto tipoProducto;
 
-    public ProductoComida(String nombre, float precio, ArrayList<String> ingredientesCaracteristicos, TipoProducto tipoProducto) {
+    public ProductoVenta(String nombre, float precio, ArrayList<String> ingredientesCaracteristicos, TipoProducto tipoProducto) {
         this.nombre = nombre;
         this.precio = precio;
         this.ingredientesCaracteristicos = ingredientesCaracteristicos;
         this.tipoProducto=tipoProducto;
+        seleccionado=false;
     }
 
-    public ProductoComida(String nombre, float precio, TipoProducto tipoProducto) {
+    public ProductoVenta(String nombre, float precio, TipoProducto tipoProducto) {
         this.nombre = nombre;
         this.precio = precio;
         this.ingredientesCaracteristicos = new ArrayList<String>();
         this.tipoProducto=tipoProducto;
+        seleccionado=false;
     }
 
     @Override
@@ -72,12 +74,14 @@ public class ProductoComida implements IProductoComida, IEstado {
     }
 
     @Override
+    public void setSeleccionado(boolean seleccionado) {
+        this.seleccionado=seleccionado;
+    }
+
+    @Override
     public boolean isSeleccionado() {
         return seleccionado;
     }
 
-    @Override
-    public void setSeleccionado() {
-              seleccionado =!seleccionado;
-    }
+
 }

@@ -1,133 +1,98 @@
 package controlador;
 
 import Helper.Color;
-import Helper.PrintInformacion;
+import Helper.printInformacion.PrintInformacionMenu;
+import Helper.printInformacion.PrintMensajesConsola;
 import Helper.registros.RegistroRestaurante;
+import Helper.validaciones.ValidacionDatoTeclado;
 import backend.clases.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class OfertaProductos {
+public class ProcesoVentaProductos {
 
     private Restaurante restaurante = RegistroRestaurante.getRestaurante();
-    private Venta venta = new Venta();
+    private Venta venta;
     private Pedido pedido;
     private Scanner teclado;
-    private PrintInformacion imprimirDatos;
+    private PrintInformacionMenu datosMenu;
+    private PrintMensajesConsola msjConsola;
+    private ProductoVenta productoVenta;
+    private CategoriaProducto categoriaProducto;
 
-    public OfertaProductos() {
-        imprimirDatos = new PrintInformacion(restaurante.getMenu());
+    ValidacionDatoTeclado datoIngresado;
+
+    public ProcesoVentaProductos() {
+        datoIngresado = new ValidacionDatoTeclado();
+        venta = new Venta();
+
+        datosMenu = new PrintInformacionMenu();
+        msjConsola = new PrintMensajesConsola();
     }
 
     public void run() {
-        imprimirDatos.printTextUppercase("***********************************  Restaurante " + restaurante.getNombre() + "  ***********************************");
-        imprimirDatos.printMenu();
-        imprimirDatos.printMensajePedidoComida();
-            registrarPeidido(solicitarDatos());
-
+        msjConsola.printTextUppercase("***********************************  Restaurante " + restaurante.getNombre() + "  ***********************************");
+        datosMenu.printMenuCategorias(restaurante.getMenu());
+        solicitarOpcion();
     }
 
-    private String[] solicitarDatos() {
-        String resul[] = new String[3];
+    private void solicitarOpcion() {
         boolean bandera = true;
+        int op = -1;
         while (bandera) {
-            System.out.print(Color.Blue + "Solicitud de comida> " + Color.Default);
-            teclado = new Scanner(System.in);
-            String seleccion = teclado.nextLine();
-            seleccion = seleccion.trim();
-            if (seleccion.equals("0")) {
-                System.exit(0);
-            } else {
-                if (isValido(seleccion)) {
-                    resul = seleccion.split(" ");
-                    bandera = !bandera;
-                } else {
-                    System.out.println(Color.Red + "Datos incorrectos!!" + Color.Default + "Ingrese los 3 datos separados por un espacio o el numero 0 para salir");
-                }
-            }
-        }
-        return resul;
-    }
-
-    private boolean isValido(String dato) {
-        String[] datos = dato.split(" ");
-        if (datos.length == 3) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private void solicitarNuevoPedido() {
-        PrintInformacion.solicitarNuevoPedido();
-        String resul[] = new String[3];
-        boolean bandera = true;
-        teclado = new Scanner(System.in);
-        while (bandera) {
-            try {
-                int res = teclado.nextInt();
-                if (res >= 0 && res <= 4) {
-                    switch (res) {
-                        case 0:
-                            System.exit(0);
-                        case 1:
-                            generarFactura();
-                            bandera=!bandera;
-                            break;
-                        case 2:
-                            imprimirDatos.printMenu();
-                        case 3:
-                            registrarPeidido(solicitarDatos());
-                            break;
+            msjConsola.printOpciones();
+            op = datoIngresado.getNummeroEnRango(3, "Opcion");
+            switch (op) {
+                case 1:
+                    datosMenu.printMenuCategorias(restaurante.getMenu());
+                    break;
+                case 2:
+                    nuevoPedido();
+                    break;
+                case 3:
+                    if (venta.getPedidos().size() >= 1) {
+                        generarFactura();
+                        bandera = !bandera;
+                    }else msjConsola.printCompraVacia();
+                        break;
                     }
-                }
-            } catch (Exception e) {
-                System.out.println("ingrese dato correcto!!!");
             }
         }
 
-    }
+        void nuevoPedido () {
+            msjConsola.printCategoriaProductoCantidad();
+            int iCategoria = datoIngresado.getNummeroEnRango(restaurante.getMenu().getCategoriasProducto().size(), "Indice categoria");
+            int iProducto = datoIngresado.getNummeroEnRango(restaurante.getMenu().getCategoriasProducto().get(iCategoria - 1).getProductos().size() + 1, "Indice producto");
+            int Icantidad = datoIngresado.getNummeroEnRango(1000, "Cantidad a comprar, -Maximo 1000 unidades -");
+            categoriaProducto = restaurante.getMenu().getCategoriasProducto().get(iCategoria - 1);
+            categoriaProducto.setSeleccionado(true);
+            productoVenta = categoriaProducto.getProductoVenta(iProducto - 1);
+            productoVenta.setSeleccionado(true);
+            pedido = new Pedido(Icantidad, productoVenta);
+            venta.addPedido(pedido);
+            datosMenu.printProductosPedidos(venta);
+        }
 
-    private void registrarPeidido(String[] datos) {
-        int indiceCategoria = Integer.parseInt(datos[0]) - 1;
-        int indiceProducto = Integer.parseInt(datos[1]) - 1;
-        int cantidad = Integer.parseInt(datos[2]);
-        pedido = new Pedido(cantidad, restaurante.getMenu().getCategoriasProducto().get(indiceCategoria).getProductos().get(indiceProducto));
-        venta.addPedido(pedido);
-        printPedidos();
-        solicitarNuevoPedido();
-    }
+        void generarFactura () {
+            addDatosClienteVenta();
+            System.out.println(Color.Blue + "*************FACTURA DE COMPRA********************");
+            System.out.println("Total Pedidos:" + Color.Default);
+            datosMenu.printProductosPedidos(venta);
+            datosMenu.printDatosClientes(venta.getDatosCliente());
+            System.out.println();
+            System.out.println(Color.Blue + "Total Compra...................................." + venta.getTotalCompra());
+            System.out.println(Color.Blue + "*****************************************************");
+            System.exit(0);
+        }
 
-    private void printPedidos() {
-        for (int i = 0; i < venta.getPedidos().size(); i++) {
-            System.out.print((i + 1) + ")" + venta.getPedidos().get(i).getProducto().getNombre() + "  ");
-            PrintInformacion.printInformacionProducto(venta.getPedidos().get(i).getProducto());
-            System.out.println(venta.getPedidos().get(i).getPrecio());
+        private void addDatosClienteVenta () {
+            teclado = new Scanner(System.in);
+            System.out.println("Ingrese su Nombre");
+            String nombre = teclado.nextLine();
+            System.out.println("Ingrese su Nit");
+            String nit = teclado.nextLine();
+            Cliente cliente = new Cliente(nombre, nit);
+            venta.setCliente(cliente);
         }
     }
-
-    private void generarFactura() {
-        teclado=new Scanner(System.in);
-        System.out.println("Ingrese su Nombre");
-        String nombre=teclado.nextLine();
-        System.out.println("Ingrese su Nit");
-        String nit=teclado.nextLine();
-        Cliente cliente=new Cliente(nombre,nit);
-        venta.setCliente(cliente);
-        System.out.println(Color.Red+"---------------------------   FACTURA COMPRA ----------------------------------");
-        printPedidos();
-        System.out.println("Cliente: "+venta.getDatosCliente().getNombre());
-        System.out.println("Nit: "+venta.getDatosCliente().getNit());
-        System.out.println("Moonto total a pagar: "+getTotalCompra(venta.getPedidos()));
-
-    }
-
-    private float getTotalCompra(ArrayList<Pedido> pedidos){
-        float total=0;
-        for (int i = 0; i < pedidos.size(); i++) {
-            total+=pedidos.get(i).getPrecio();
-        }
-        return total;
-    }
-}

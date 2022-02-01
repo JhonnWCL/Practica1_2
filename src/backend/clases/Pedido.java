@@ -4,10 +4,10 @@ import backend.interfaces.IPedido;
 
 public class Pedido implements IPedido {
     private int cantidad;
-    private ProductoComida productoComida;
+    private ProductoVenta productoComida;
     private float precio;
 
-    public Pedido(int cantidad, ProductoComida productoComida) {
+    public Pedido(int cantidad, ProductoVenta productoComida) {
         this.cantidad = cantidad;
         this.productoComida = productoComida;
         this.precio = 0;
@@ -24,7 +24,7 @@ public class Pedido implements IPedido {
     }
 
     @Override
-    public ProductoComida getProducto() {
+    public ProductoVenta getProducto() {
         return productoComida;
     }
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class CategoriaProductosUVPT extends CategoriaProducto {
     private ArrayList<TamañoProducto> tamañosProducto = new ArrayList<TamañoProducto>();
 
-    public CategoriaProductosUVPT(String nombre, TipoUnidadDeVenta tipoUnidadDeVenta, ArrayList<ProductoComida> productos) {
+    public CategoriaProductosUVPT(String nombre, TipoUnidadDeVenta tipoUnidadDeVenta, ArrayList<ProductoVenta> productos) {
         super(nombre, tipoUnidadDeVenta, productos);
         tamañosProducto = new ArrayList<TamañoProducto>();
     }

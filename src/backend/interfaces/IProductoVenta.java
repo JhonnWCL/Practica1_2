@@ -2,7 +2,7 @@ package backend.interfaces;
 
 import java.util.ArrayList;
 
-public interface IProductoComida {
+public interface IProductoVenta {
     String getNombre();
 
     void setNombre(String nombre);

@@ -29,4 +29,9 @@ public class Menu implements IMenu {
     public void deleteCategoriaProducto(CategoriaProducto producto) {
        //sobreescribir el metodo CompareTo
     }
+
+    @Override
+    public CategoriaProducto getCategoria(int indice) {
+        return categorias.get(indice);
+    }
 }

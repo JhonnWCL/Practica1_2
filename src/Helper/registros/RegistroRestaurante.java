@@ -1,4 +1,4 @@
-package Helper;
+package Helper.registros;
 
 import backend.clases.Restaurante;
 

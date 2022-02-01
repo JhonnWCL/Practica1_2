@@ -11,9 +11,9 @@ public class CategoriaProducto implements ICategoriaProducto, IEstado {
     private String nombre;
     private boolean seleccionado;
     private TipoUnidadDeVenta tipoUnidadDeVenta;
-    private ArrayList<ProductoComida> productos;
+    private ArrayList<ProductoVenta> productos;
 
-    public CategoriaProducto(String nombre, TipoUnidadDeVenta tipoUnidadDeVenta, ArrayList<ProductoComida> productos) {
+    public CategoriaProducto(String nombre, TipoUnidadDeVenta tipoUnidadDeVenta, ArrayList<ProductoVenta> productos) {
         this.nombre = nombre;
         this.tipoUnidadDeVenta = tipoUnidadDeVenta;
         this.productos = productos;
@@ -31,13 +31,18 @@ public class CategoriaProducto implements ICategoriaProducto, IEstado {
     }
 
     @Override
-    public ArrayList<ProductoComida> getProductos() {
+    public ArrayList<ProductoVenta> getProductos() {
         return productos;
     }
 
     @Override
-    public void addProductoComida(ProductoComida producto) {
+    public void addProductoComida(ProductoVenta producto) {
         productos.add(producto);
+    }
+
+    @Override
+    public ProductoVenta getProductoVenta(int indice) {
+        return productos.get(indice);
     }
 
     @Override
@@ -51,7 +56,7 @@ public class CategoriaProducto implements ICategoriaProducto, IEstado {
     }
 
     @Override
-    public void deleteProducto(ProductoComida producto) {
+    public void deleteProducto(ProductoVenta producto) {
         //sobreescribir el metodo Compareto
     }
 
@@ -61,8 +66,8 @@ public class CategoriaProducto implements ICategoriaProducto, IEstado {
     }
 
     @Override
-    public void setSeleccionado() {
-        seleccionado = !seleccionado;
+    public void setSeleccionado(boolean seleccionado) {
+        this.seleccionado=seleccionado;
     }
 
 }

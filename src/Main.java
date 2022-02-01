@@ -1,10 +1,10 @@
-import controlador.OfertaProductos;
+import controlador.ProcesoVentaProductos;
 
 
 public class Main {
     public static void main(String[] args) {
 
-        OfertaProductos menus=new OfertaProductos();
+        ProcesoVentaProductos menus=new ProcesoVentaProductos();
         menus.run();
           }
 }

@@ -1,7 +1,7 @@
-package Helper;
+package Helper.registros;
 
 import backend.clases.CategoriaProducto;
-import backend.clases.ProductoComida;
+import backend.clases.ProductoVenta;
 import backend.tiposDeDatosEnumerados.TipoUnidadDeVenta;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class RegistroCategoria {
 
     public static CategoriaProducto getCategoriaaHamburguesa() {
-        ArrayList<ProductoComida> productos = new ArrayList<>();
+        ArrayList<ProductoVenta> productos = new ArrayList<>();
         productos.addAll(RegistroProductosPrincipales.getProductosHambuerguesas());
         productos.addAll(RegistroProductoComplemento.getProductoCHamburguesa());
         CategoriaProducto categoria = new CategoriaProducto("Hamburguesa", TipoUnidadDeVenta.Unica, productos);
@@ -17,7 +17,7 @@ public class RegistroCategoria {
     }
 
     public static CategoriaProducto getCategoriaaPizzas() {
-        ArrayList<ProductoComida> productos = new ArrayList<>();
+        ArrayList<ProductoVenta> productos = new ArrayList<>();
         productos.addAll(RegistroProductosPrincipales.getProductosPizza());
         productos.addAll(RegistroProductoComplemento.getProductoCPizza());
         CategoriaProducto categoria = new CategoriaProducto("Pizza", TipoUnidadDeVenta.PorTamaño, productos);
@@ -25,7 +25,7 @@ public class RegistroCategoria {
     }
 
     public static CategoriaProducto getCategoriaAlitasDePollo() {
-        ArrayList<ProductoComida> productos = new ArrayList<>();
+        ArrayList<ProductoVenta> productos = new ArrayList<>();
         productos.addAll(RegistroProductosPrincipales.getProductosAlitasDePollo());
         productos.addAll(RegistroProductoComplemento.getProductoCAlitasDePollo());
         CategoriaProducto categoria = new CategoriaProducto("Alitas de Pollo", TipoUnidadDeVenta.PorTamaño, productos);

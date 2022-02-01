@@ -8,4 +8,6 @@ public interface IMenu  {
     ArrayList <CategoriaProducto> getCategoriasProducto();
     void addCategoriaProducto(CategoriaProducto categoriaProducto);
     void deleteCategoriaProducto(CategoriaProducto producto);
+    CategoriaProducto getCategoria(int indice);
+
 }

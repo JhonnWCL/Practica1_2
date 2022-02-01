@@ -1,10 +1,10 @@
 package backend.interfaces;
 
-import backend.clases.ProductoComida;
+import backend.clases.ProductoVenta;
 
 public interface IPedido {
     int getCantidad();
     void setCantidad(int cantidad);
-    ProductoComida getProducto();
+    ProductoVenta getProducto();
     float getPrecio();
 }
