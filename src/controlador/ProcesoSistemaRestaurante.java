@@ -2,17 +2,17 @@ package controlador;
 
 import Helper.Color;
 import Helper.printInformacion.PrintInformacionMenu;
+import Helper.printInformacion.PrintInformacionSalario;
 import Helper.printInformacion.PrintMensajesConsola;
 import Helper.registros.RegistroRestaurante;
 import Helper.validaciones.ValidacionDatoTeclado;
 import backend.clases.*;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ProcesoVentaProductos {
+public class ProcesoSistemaRestaurante {
 
-    private Restaurante restaurante = RegistroRestaurante.getRestaurante();
+    private Restaurante restaurante;
     private Venta venta;
     private Pedido pedido;
     private Scanner teclado;
@@ -23,7 +23,8 @@ public class ProcesoVentaProductos {
 
     ValidacionDatoTeclado datoIngresado;
 
-    public ProcesoVentaProductos() {
+    public ProcesoSistemaRestaurante() {
+        restaurante= RegistroRestaurante.getRestaurante();
         datoIngresado = new ValidacionDatoTeclado();
         venta = new Venta();
 
@@ -42,7 +43,7 @@ public class ProcesoVentaProductos {
         int op = -1;
         while (bandera) {
             msjConsola.printOpciones();
-            op = datoIngresado.getNummeroEnRango(3, "Opcion");
+            op = datoIngresado.getNummeroEnRango(4, "Opcion");
             switch (op) {
                 case 1:
                     datosMenu.printMenuCategorias(restaurante.getMenu());
@@ -56,6 +57,9 @@ public class ProcesoVentaProductos {
                         bandera = !bandera;
                     }else msjConsola.printCompraVacia();
                         break;
+                case 4:
+                    mostrarEgresosPagoSueldo();
+                    break;
                     }
             }
         }
@@ -94,5 +98,10 @@ public class ProcesoVentaProductos {
             String nit = teclado.nextLine();
             Cliente cliente = new Cliente(nombre, nit);
             venta.setCliente(cliente);
+        }
+
+        private void mostrarEgresosPagoSueldo(){
+            PrintInformacionSalario informacionSalarios=new PrintInformacionSalario();
+            informacionSalarios.printSalarios(restaurante.getEmpleado());
         }
     }

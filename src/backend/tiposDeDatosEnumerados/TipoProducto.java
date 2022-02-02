@@ -1,5 +1,5 @@
 package backend.tiposDeDatosEnumerados;
 
 public enum TipoProducto {
-    Principal, Complemento
+    Principal, Complemento,Bebida
 }

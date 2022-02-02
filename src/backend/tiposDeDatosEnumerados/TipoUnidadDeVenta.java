@@ -1,5 +1,5 @@
 package backend.tiposDeDatosEnumerados;
 
 public enum TipoUnidadDeVenta {
-    Unica,PorTamaño
+    Unica,PorTamaño, PorCantidad
 }

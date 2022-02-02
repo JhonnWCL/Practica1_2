@@ -3,9 +3,8 @@ package Helper.registros;
 import backend.clases.Restaurante;
 
 public class RegistroRestaurante {
-
     public static Restaurante getRestaurante(){
-        Restaurante restaurante=new Restaurante("Comida 24/7",RegistroMenu.getMenu());
+        Restaurante restaurante=new Restaurante("Comida 24/7",RegistroMenu.getMenu(), RegistroEmpleados.getEmpleados());
         return restaurante;
     }
 }

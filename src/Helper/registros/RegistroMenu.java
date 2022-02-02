@@ -10,6 +10,7 @@ public class RegistroMenu {
         menu.addCategoriaProducto(RegistroCategoria.getCategoriaaHamburguesa());
         menu.addCategoriaProducto(RegistroCategoria.getCategoriaaPizzas());
         menu.addCategoriaProducto(RegistroCategoria.getCategoriaAlitasDePollo());
+        menu.addCategoriaProducto(RegistroCategoria.getCategoriaBebidas());
         return menu;
     }
 }

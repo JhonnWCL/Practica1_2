@@ -1,10 +1,9 @@
-import controlador.ProcesoVentaProductos;
+import controlador.ProcesoSistemaRestaurante;
 
 
 public class Main {
     public static void main(String[] args) {
-
-        ProcesoVentaProductos menus=new ProcesoVentaProductos();
-        menus.run();
+        ProcesoSistemaRestaurante sistema=new ProcesoSistemaRestaurante();
+        sistema.run();
           }
 }

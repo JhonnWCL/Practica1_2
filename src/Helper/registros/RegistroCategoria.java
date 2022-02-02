@@ -31,4 +31,11 @@ public class RegistroCategoria {
         CategoriaProducto categoria = new CategoriaProducto("Alitas de Pollo", TipoUnidadDeVenta.PorTamaño, productos);
         return categoria;
     }
+
+    public static CategoriaProducto getCategoriaBebidas() {
+        ArrayList<ProductoVenta> productos = new ArrayList<>();
+        productos = RegistroProductoBebida.getBebidasRegistradas();
+        CategoriaProducto categoria = new CategoriaProducto("Bebidas", TipoUnidadDeVenta.PorCantidad, productos);
+        return categoria;
+    }
 }

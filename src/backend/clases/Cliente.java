@@ -1,16 +1,14 @@
 package backend.clases;
 
-import backend.interfaces.IUsuario;
-
-public class Cliente implements IUsuario {
+public class Cliente extends  Persona {
     private String nombre;
     private String nit;
 
-    public Cliente(String nombre, String nit) {
+    public Cliente(String nombre,String nit) {
+        super(nombre,"", -1);
         this.nombre = nombre;
         this.nit = nit;
     }
-
     @Override
     public String getNombre() {
         return nombre;
@@ -21,12 +19,10 @@ public class Cliente implements IUsuario {
           this.nombre=nombre;
     }
 
-    @Override
     public String getNit() {
         return nit;
     }
 
-    @Override
     public void setNit(String nit) {
         this.nit=nit;
     }
