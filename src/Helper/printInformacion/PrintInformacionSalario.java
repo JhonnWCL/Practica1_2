@@ -22,7 +22,7 @@ public class PrintInformacionSalario {
             totalEgreso+=empleado.getSalario();
         }
 
-        texto="TOTAL EGRESOS POR PAGO SALARIO ";
+        texto="TOTAL EGRESOS POR PAGO SALARIO MES";
         concatEnlace();
         System.out.println(texto+totalEgreso +"Bs.");
 
